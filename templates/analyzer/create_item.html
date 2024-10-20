@@ -1,0 +1,33 @@
+{% extends "analyzer/base.html" %}
+{% block content %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create App</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">  
+</head>
+<body>
+    <div class="container">
+        <h1>Create a New App</h1>
+
+        <form method="POST" action="{% url 'create_item' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="name">App Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="apk_file">APK File:</label>
+                <input type="file" id="apk_file" name="apk_file_path" required>
+            </div>
+            <button type="submit">Create App</button>
+        </form>
+      
+
+        <a href="{% url 'app_list' %}">Back to App List</a>
+    </div>
+</body>
+</html>
+{% endblock %}
