@@ -1,0 +1,65 @@
+{% extends "analyzer/base.html" %}
+{% block content %}
+{% load static %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>APK Analyzer Apps</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<style>
+body {
+    background: lightblue;
+  }
+</style>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">APK Analyzer Apps</h1>
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>APK File Path</th>
+                            <th>Uploaded By</th>
+                            <th>Created At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for app in apps %}
+                        <tr>
+                             <td>{{ app.id }}</td> 
+                            <td>{{ app.name }}</td>
+                            <td>
+                                {% if app.apk_file_path %}
+                                    <a href="{{ app.apk_file_path.url }}">{{ app.apk_file_path.name }}</a>
+                                {% else %}
+                                    No file uploaded
+                                {% endif %}
+                            </td>
+                            <td>{{ app.uploaded_by.username }}</td>
+                            <td>{{ app.created_at|date:"F j, Y, g:i a" }}</td>
+                            <td>
+                                    <form method="POST" action="{% url 'delete_item' app.id %}" style="display:inline;">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this app?');">Delete</button>
+                                    </form>
+                                    <a href="{% url 'edit_item' app.id %}" class="btn btn-warning">Edit</a> <!-- Edit button -->
+                            </td>
+
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+{% endblock %}
