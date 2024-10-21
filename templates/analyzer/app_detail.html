@@ -1,0 +1,54 @@
+
+{% extends "analyzer/base.html" %}
+{% block content %}
+{% load static %}
+
+
+<h1>{{ app.name }} - Test Results</h1>
+
+{% if test_results %}
+    <ul>
+        {% for result in test_results %}
+            <li>
+                <h3>Test Log:</h3>
+                <pre>{{ result.log }}</pre>  <!-- Display the test log -->
+                <img src="{{ result.initial_screenshot.url }}" alt="Initial Screenshot">
+                <img src="{{ result.subsequent_screenshot.url }}" alt="Subsequent Screenshot">
+                {% if result.video %}
+                    <video controls>
+                        <source src="{{ result.video.url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                {% endif %}
+                <p>Test Date: {{ result.created_at }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No test results available for this app.</p>
+{% endif %}
+
+{% endblock %}
+
+
+
+<!--
+<h1>{{ app.name }}</h1>
+<p>APK File: {{ app.apk_file_path }}</p>
+<p>Uploaded By: {{ app.uploaded_by.username }}</p>
+
+<h2>Test Results</h2>
+<ul>
+    {% for result in test_results %}
+        <li>
+            <strong>Test Date:</strong> {{ result.created_at }}<br>
+            <strong>Screen Changed:</strong> {{ result.screen_changed }}<br>
+            <img src="{{ result.initial_screenshot.url }}" alt="Initial Screenshot" width="100"><br>
+            <img src="{{ result.subsequent_screenshot.url }}" alt="Subsequent Screenshot" width="100">
+        </li>
+    {% empty %}
+        <li>No test results available for this app.</li>
+    {% endfor %}
+</ul>
+
+-->

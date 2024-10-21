@@ -1,0 +1,555 @@
+Check the test:
+INFO 2024-08-21 23:22:21,670 basehttp 9182 131831903028928 "GET / HTTP/1.1" 200 3106
+INFO 2024-08-21 23:22:21,976 basehttp 9182 131831903028928 "GET /static/css/mystyle.css HTTP/1.1" 200 39
+WARNING 2024-08-21 23:22:22,278 log 9182 131831892543168 Not Found: /favicon.ico
+INFO 2024-08-21 23:22:26,282 basehttp 9182 131831903028928 "POST /login/ HTTP/1.1" 200 1426
+INFO 2024-08-21 23:22:28,918 basehttp 9182 131831903028928 "POST /login/ HTTP/1.1" 302 0
+INFO 2024-08-21 23:22:28,984 basehttp 9182 131831903028928 "GET /create/ HTTP/1.1" 200 1434
+WARNING 2024-08-21 23:22:29,054 basehttp 9182 131831903028928 "GET /static/css/styles.css HTTP/1.1" 404 1801
+INFO 2024-08-21 23:22:30,793 basehttp 9182 131831903028928 "GET /apps/ HTTP/1.1" 200 4440
+INFO 2024-08-21 23:22:54,640 basehttp 9182 131831903028928 "POST /run-appium-test/ HTTP/1.1" 200 53
+INFO 2024-08-21 23:22:54,952 basehttp 9182 131831903028928 "GET /app/18/ HTTP/1.1" 200 501
+INFO    | Storing crashdata in: /tmp/android-hazem-elbatawy/emu-crash-34.2.16.db, detection is enabled for process: 9288
+INFO    | Android emulator version 34.2.16.0 (build_id 12038310) (CL:N/A)
+INFO    | Found systemPath /home/hazem-elbatawy/Android/Sdk/system-images/android-35/google_apis_playstore/x86_64/
+INFO    | Storing crashdata in: /tmp/android-hazem-elbatawy/emu-crash-34.2.16.db, detection is enabled for process: 9288
+INFO    | Duplicate loglines will be removed, if you wish to see each individual line launch with the -log-nofilter flag.
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_new_posture_requested(int) ((null):0, (null))
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_posture_selection_dialog() ((null):0, (null))
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_new_resizable_requested(PresetEmulatorSizeType) ((null):0, (null))
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_dismiss_resizable_dialog() ((null):0, (null))
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_sleep_timer_done() ((null):0, (null))
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_unfold_timer_done() ((null):0, (null))
+WARNING | Your GPU drivers may have a bug. Switching to software rendering.
+library_mode swangle_indirect gpu mode swangle_indirect
+INFO    | Initializing hardware OpenGLES emulation support
+android_startOpenglesRenderer: gpu infoI0821 23:23:05.704374    9288 HealthMonitor.cpp:279] HealthMonitor disabled.
+cannot add library /home/hazem-elbatawy/Android/Sdk/emulator/qemu/linux-x86_64/lib64/vulkan/libvulkan.so: failed
+cannot add library /home/hazem-elbatawy/Android/Sdk/emulator/qemu/linux-x86_64/lib64/vulkan/libvulkan.so.1: failed
+added library /home/hazem-elbatawy/Android/Sdk/emulator/lib64/vulkan/libvulkan.so
+createGlobalVkEmulation:995 Selecting Vulkan device: SwiftShader Device (Subzero)
+initialize: Supports id properties, got a vulkan device UUID
+I0821 23:23:07.146128    9288 VkCommonOperations.cpp:1276] Initializing VkEmulation features:
+I0821 23:23:07.146160    9288 VkCommonOperations.cpp:1277]     glInteropSupported: false
+I0821 23:23:07.146176    9288 VkCommonOperations.cpp:1278]     useDeferredCommands: true
+I0821 23:23:07.146180    9288 VkCommonOperations.cpp:1280]     createResourceWithRequirements: true
+I0821 23:23:07.146185    9288 VkCommonOperations.cpp:1281]     useVulkanComposition: false
+I0821 23:23:07.146189    9288 VkCommonOperations.cpp:1282]     useVulkanNativeSwapchain: false
+I0821 23:23:07.146193    9288 VkCommonOperations.cpp:1283]     enable guestRenderDoc: false
+I0821 23:23:07.146198    9288 VkCommonOperations.cpp:1284]     ASTC LDR emulation mode: 2
+I0821 23:23:07.146203    9288 VkCommonOperations.cpp:1285]     enable ETC2 emulation: true
+I0821 23:23:07.146207    9288 VkCommonOperations.cpp:1286]     enable Ycbcr emulation: false
+I0821 23:23:07.146211    9288 VkCommonOperations.cpp:1287]     guestUsesAngle: false
+I0821 23:23:07.146215    9288 VkCommonOperations.cpp:1288]     useDedicatedAllocations: false
+I0821 23:23:07.148788    9288 FrameBuffer.cpp:506] Graphics Adapter Vendor Google (Google Inc.)
+I0821 23:23:07.148799    9288 FrameBuffer.cpp:507] Graphics Adapter Android Emulator OpenGL ES Translator (Google SwiftShader)
+I0821 23:23:07.148805    9288 FrameBuffer.cpp:508] Graphics API Version OpenGL ES 3.0 (OpenGL ES 3.0 SwiftShader 4.0.0.1)
+I0821 23:23:07.148813    9288 FrameBuffer.cpp:509] Graphics API Extensions GL_OES_EGL_sync GL_OES_EGL_image GL_OES_EGL_image_external GL_OES_depth24 GL_OES_depth32 GL_OES_element_index_uint GL_OES_texture_float GL_OES_texture_float_linear GL_OES_compressed_paletted_texture GL_OES_compressed_ETC1_RGB8_texture GL_OES_depth_texture GL_OES_texture_half_float GL_OES_texture_half_float_linear GL_OES_packed_depth_stencil GL_OES_vertex_half_float GL_OES_standard_derivatives GL_OES_texture_npot GL_OES_rgb8_rgba8 GL_EXT_color_buffer_float GL_EXT_color_buffer_half_float GL_EXT_texture_format_BGRA8888 GL_APPLE_texture_format_BGRA8888 
+I0821 23:23:07.148824    9288 FrameBuffer.cpp:510] Graphics Device Extensions N/A
+INFO    | OpenGL Vendor=[Google (Google Inc.)]
+INFO    | OpenGL Renderer=[Android Emulator OpenGL ES Translator (Google SwiftShader)]
+INFO    | OpenGL Version=[OpenGL ES 3.0 (OpenGL ES 3.0 SwiftShader 4.0.0.1)]
+INFO    | Sending adb public key [QAAAABGcyLIPK4g7ZXOS25297Aj8I038wuS//cNEmaYs2D+1Rs9N4kkBhNC63b7LVxysurQ4ys3S6eQdCQ8InZDEQHJTx1G7OBQudg3dgquDSD6nkkqNc71dpYOXGsvaDEOHUnd6J0XLtam4J+RzauLO+MzIejTCnO4+Z2SCIlp50goQpR3/6LLmOXsuSVWQqBP+MYfsxAgEx2S9ti5PTouOkJKFe3YGXRFLxMsc6/rC4G07Wl4qcazA76Y8la8kAnkVhNBHmNNIGoHUNmmnXkyss5eugXMop8RtSfGV3HkO2J89VJ7l7otiJAFYhJELXUvEQgAmfOGKsXmUaAxuzE9dNzXMAg7JS7/+jgw3rRfLY2u4A62Hwi7wMGBF1m8oQYngNT4hAMb7DMEwyc+QV3SGx4swrKyl4N3QUmbHgUqfcT+G33bN6dwHtbCg5AGAKLP2foXHyJoayf1zGWizTd0kAq0ivoRs9eYjAYrr94Qy0DAhrJApnoWyscLkeDdwEamTIKdgfnwVf1HbcRjAyCguXZM5WT/Ny1CHlo+k/MXazZaGvngzU/wzDAKLv8prY0zPQQvV0SkhtzS3rYOsvECvOSgpfEUjfyf6veCbgSRId3mh8C2VmlOUTQXGVKx/XT8C6exgoPs9LQ3bLezaRPFdGOd8MgLQsc3oY/yifMmYNw1qEgy/pgEAAQA= hazem-elbatawy@unknown]
+INFO    | Activated packet streamer for bluetooth emulation
+[Appium] Welcome to Appium v2.11.3
+[Appium] The autodetected Appium home path: /home/hazem-elbatawy/Downloads/apk_analyzer
+[Appium] Attempting to load driver uiautomator2...
+[Appium] Requiring driver at /home/hazem-elbatawy/Downloads/apk_analyzer/node_modules/appium-uiautomator2-driver/build/index.js
+WARNING: cannnot unmap ptr 0x784bea401000 as it is in the protected range from 0x784b6a400000 to 0x784bea600000
+INFO    | Monitoring duration of emulator setup.
+WARNING | The emulator now requires a signed jwt token for gRPC access! Use the -grpc flag if you really want an open unprotected grpc port
+INFO    | Using security allow list from: /home/hazem-elbatawy/Android/Sdk/emulator/lib/emulator_access.json
+WARNING | *** Basic token auth should only be used by android-studio ***
+INFO    | The active JSON Web Key Sets can be found here: /run/user/1000/avd/running/9288/jwks/339da9bc-3495-44f5-8b07-46009c734947/active.jwk
+INFO    | Scanning /run/user/1000/avd/running/9288/jwks/339da9bc-3495-44f5-8b07-46009c734947 for jwk keys.
+INFO    | Started GRPC server at 127.0.0.1:8554, security: Local, auth: +token
+INFO    | Advertising in: /run/user/1000/avd/running/pid_9288.ini
+I0821 23:23:18.986917    9350 FrameBuffer.cpp:2853] setDisplayConfigs w 1080 h 2280 dpiX 440 dpiY 440
+I0821 23:23:18.986961    9350 FrameBuffer.cpp:2866] setDisplayActiveConfig 0
+INFO    | Loading snapshot 'default_boot'...
+WARNING | Device 'cache' does not have the requested snapshot 'default_boot'
+WARNING | Failed to load snapshot 'default_boot'
+[Appium] AndroidUiautomator2Driver has been successfully loaded in 11.587s
+[Appium] Appium REST http interface listener started on http://0.0.0.0:4723
+[Appium] You can provide the following URLs in your client code to connect to this server:
+	http://127.0.0.1:4723/ (only accessible from the same host)
+	http://192.168.237.209:4723/
+[Appium] Available drivers:
+[Appium]   - uiautomator2@3.7.7 (automationName 'UiAutomator2')
+[Appium] No plugins have been installed. Use the "appium plugin" command to install the one(s) you want to use.
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_rgbcSensorValueWidget_valueChanged() ((null):0, (null))
+INFO    | Warning: QMetaObject::connectSlotsByName: No matching signal for on_posture_valueChanged(int) ((null):0, (null))
+INFO    | Enforce emulator to use the keycode forwarding feature. Host keyboard events will be translated directly to linux keycode and sent to guest AVD as is.
+ERROR   | Error reading vhal json
+INFO    | Boot completed in 90105 ms
+INFO    | Increasing screen off timeout, logcat buffer size to 2M.
+INFO    | Info: Sandboxing disabled by user. ((null):0, (null))
+I0821 23:27:13.264834   10004 VkDecoderGlobalState.cpp:631] Creating Vulkan instance for app: Chromium
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+I0821 23:32:08.089492   10368 VkDecoderGlobalState.cpp:631] Creating Vulkan instance for app: Chromium
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000338000
+../../third_party/SwiftShader/src/Vulkan/VkPhysicalDevice.cpp:649 WARNING: UNSUPPORTED: curExtension->sType: 1000437000
+[h264 @ 0x5eebce173b00] no frame!
+[h264 @ 0x5eebce173b00] no frame!
+
+^C[Appium] Received SIGINT - shutting down
+[AppiumDriver@01e4] There are no active sessions for cleanup
+[HTTP] Closing Appium HTTP server
+[HTTP] Appium HTTP server has been succesfully closed after 0ms
+(my_venv) hazem-elbatawy@hazem-elbatawy-Vostro-15-3510:~/Downloads/apk_analyzer$ ^C
+** The test should automatically take screenshots and videos recording as far as i imagine that. Am i right?
+
+
+
+
+
+
+
+
+
+
+
+
+||||||||||||||||||||||||||||||||||||||||
+||||||||||||||||||||Answer||||||||||||||
+||||||||||||||||||||||||||||||||||||||||
+
+
+Based on the provided log output, here are some observations and potential issues to consider regarding your Appium test setup:
+
+### Key Observations
+
+1. **HTTP Requests**:
+   - The log shows various HTTP requests being made, including successful responses (`200`) for your app's endpoints.
+   - There are warnings for missing resources, such as a `favicon.ico` and a CSS file (`styles.css`), which are not critical but should be addressed for a better user experience.
+
+2. **Emulator Initialization**:
+   - The emulator appears to be starting up correctly, but there are several warnings related to GPU drivers and Vulkan support.
+   - The logs indicate that the emulator switched to software rendering due to potential issues with the GPU drivers.
+
+3. **Appium Initialization**:
+   - Appium starts successfully and loads the `uiautomator2` driver.
+   - There are warnings about the emulator requiring a signed JWT token for gRPC access, which may affect connectivity if not handled properly.
+
+4. **Vulkan Warnings**:
+   - Multiple warnings about unsupported Vulkan extensions are present, which may indicate compatibility issues with the graphics rendering in the emulator.
+
+5. **Boot and Setup Duration**:
+   - The emulator booted in approximately 90 seconds, which is reasonable, but you may want to monitor performance.
+
+### Recommendations
+
+1. **Address Missing Resources**:
+   - Ensure that the `favicon.ico` and any missing CSS files are correctly placed in your static directory to avoid 404 errors.
+
+2. **Check GPU Drivers**:
+   - Update your GPU drivers to the latest version to resolve potential issues with hardware acceleration.
+   - If issues persist, consider running the emulator with software rendering if your application does not require intensive graphics.
+
+3. **JWT Token for gRPC**:
+   - Make sure your Appium setup is configured to handle the JWT token requirement for gRPC access, especially if you're using features that depend on this.
+
+4. **Vulkan Compatibility**:
+   - If your application relies on Vulkan, investigate the warnings about unsupported extensions. You may need to adjust your emulator settings or use a different emulator image that better supports Vulkan.
+
+5. **Monitor Emulator Performance**:
+   - Keep an eye on the emulator's performance during tests. If you notice significant slowdowns or crashes, consider optimizing your setup or using a physical device for testing.
+
+6. **Error Handling in Code**:
+   - Implement error handling in your code to catch and log exceptions during the Appium test execution, which can provide more insights into failures.
+
+### Conclusion
+
+While the logs indicate that the Appium server and emulator are starting correctly, the warnings suggest there are areas for improvement, particularly concerning resource availability and GPU compatibility. Addressing these issues will help ensure smoother test executions and better overall performance.
+
+======================
+
+To check and update your GPU drivers and configure the Android emulator to use software rendering, follow these steps:
+
+### Step 1: Check Your GPU Drivers
+
+#### On Windows:
+
+1. **Device Manager**:
+   - Right-click on the Start menu and select **Device Manager**.
+   - Expand the **Display adapters** section to see your GPU.
+
+2. **Update Driver**:
+   - Right-click on your GPU and select **Update driver**.
+   - Choose **Search automatically for updated driver software**.
+
+3. **Manufacturer's Website**:
+   - You can also visit the manufacturer’s website (NVIDIA, AMD, Intel) to download the latest drivers.
+
+#### On macOS:
+
+1. **About This Mac**:
+   - Click the Apple logo in the top-left corner and select **About This Mac**.
+   - Click on **System Report** and select **Graphics/Displays** to see your GPU.
+
+2. **Update macOS**:
+   - For most Macs, keeping macOS updated will also update the drivers. Go to **System Preferences** > **Software Update**.
+
+#### On Linux:
+
+1. **Check Current Driver**:
+   - Open a terminal and run:
+     ```bash
+     lspci -k | grep -EA3 'VGA|3D|Display'
+     ```
+
+2. **Update Driver**:
+   - Depending on your distribution, use the appropriate package manager:
+     - For Ubuntu:
+       ```bash
+       sudo apt update
+       sudo apt upgrade
+       ```
+
+3. **Visit Manufacturer’s Website**:
+   - For proprietary drivers (NVIDIA, AMD), visit their respective websites for the latest versions.
+
+### Step 2: Configure the Android Emulator for Software Rendering
+
+1. **Open Android Studio**:
+   - Launch Android Studio and go to the **AVD Manager** (Android Virtual Device Manager).
+
+2. **Edit Your AVD**:
+   - Find the AVD you want to modify and click on the **Edit** (pencil) icon.
+
+3. **Change Graphics Settings**:
+   - In the **Emulated Performance** section, look for the **Graphics** dropdown.
+   - Change it to **Software** instead of **Automatic** or **Hardware**.
+
+4. **Save Changes**:
+   - Click **Finish** to save your changes.
+
+### Step 3: Restart the Emulator
+
+1. **Launch the Emulator**:
+   - Start the emulator again to apply the new settings.
+
+2. **Monitor Performance**:
+   - Check if the emulator runs more smoothly with software rendering.
+
+### Additional Tips
+
+- **Check for Emulator Updates**: Ensure that you are using the latest version of the Android Emulator, as updates may fix bugs and improve performance.
+- **Use Physical Device**: If performance issues persist, consider testing on a physical device, especially for graphics-intensive applications.
+
+By following these steps, you can ensure that your GPU drivers are up to date and configure your emulator to run with software rendering if necessary.
+
+
+
+
+
+
+
+my_venv) hazem-elbatawy@hazem-elbatawy-Vostro-15-3510:~/Downloads/apk_analyzer$ lspci -k | grep -EA3 'VGA|3D|Display'
+00:02.0 VGA compatible controller: Intel Corporation TigerLake-LP GT2 [Iris Xe Graphics] (rev 01)
+	Subsystem: Dell TigerLake-LP GT2 [Iris Xe Graphics]
+	Kernel driver in use: i915
+	Kernel modules: i915, xe
+--
+01:00.0 3D controller: NVIDIA Corporation GP107M [GeForce MX350] (rev a1)
+	Subsystem: Dell GP107M [GeForce MX350]
+	Kernel driver in use: nvidia
+	Kernel modules: nvidiafb, nouveau, nvidia_drm, nvidia
+
+Based on your output, you have two graphics controllers: an Intel Iris Xe Graphics and an NVIDIA GeForce MX350. Here’s how to check for updates and configure your system accordingly:
+
+### Step 1: Update GPU Drivers
+
+#### For Intel Iris Xe Graphics
+
+1. **Check for Updates**:
+   - You can update Intel drivers using the `intel-linux-graphics-installer`. If not installed, you can use:
+     ```bash
+     sudo add-apt-repository ppa:intel-opencl/ppa
+     sudo apt update
+     sudo apt install intel-linux-graphics-installer
+     ```
+
+2. **Use Intel's Driver Update Tool**:
+   - Visit the [Intel Driver & Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html) to check for the latest drivers.
+
+#### For NVIDIA GeForce MX350
+
+1. **Add the NVIDIA PPA**:
+   ```bash
+   sudo add-apt-repository ppa:graphics-drivers/ppa
+   sudo apt update
+   ```
+
+2. **Install Latest Drivers**:
+   - Check for available drivers:
+     ```bash
+     ubuntu-drivers devices
+     ```
+   - Install the recommended driver (e.g., `nvidia-driver-XXX`):
+     ```bash
+     sudo apt install nvidia-driver-XXX
+     ```
+   - Replace `XXX` with the version number recommended by the previous command.
+
+3. **Reboot**:
+   - After installation, reboot your system:
+     ```bash
+     sudo reboot
+     ```
+
+### Step 2: Configure Android Emulator for Software Rendering
+
+1. **Open Android Studio**:
+   - Launch Android Studio and navigate to the **AVD Manager**.
+
+2. **Edit Your AVD**:
+   - Find your AVD and click the **Edit** (pencil) icon.
+
+3. **Change Graphics Settings**:
+   - In the **Emulated Performance** section, set the **Graphics** option to **Software**.
+
+4. **Save Changes**:
+   - Click **Finish** to save the changes.
+
+### Step 3: Restart the Emulator
+
+1. **Launch the Emulator**:
+   - Start the emulator to apply the new settings.
+
+2. **Monitor Performance**:
+   - Check if the emulator runs more smoothly with software rendering enabled.
+
+### Additional Notes
+
+- **Performance Monitoring**: Keep an eye on performance and any warnings in the log output after making these changes.
+- **Consider Using a Physical Device**: If issues persist, testing on a physical device may provide better performance for graphics-intensive applications.
+
+By following these steps, you should be able to update your GPU drivers and configure your Android emulator effectively.
+
+=========================================================
+
+This will make difference for me to let the appium test take screenshot or not necessary!!!!!
+
+
+Updating your GPU drivers and configuring the emulator to use software rendering can indeed impact Appium tests, particularly when it comes to taking screenshots. Here’s how these changes can make a difference:
+
+### Potential Benefits
+
+1. **Improved Stability**:
+   - Updated drivers can resolve issues related to graphics rendering, which might prevent crashes or glitches during tests. This stability is crucial for consistent screenshot capturing.
+
+2. **Better Performance**:
+   - Using the correct driver can enhance the emulator's performance, leading to faster loading times and smoother interactions. This can help ensure that screenshots are taken at the right moment without lag.
+
+3. **Reduced Rendering Issues**:
+   - Issues with hardware acceleration can sometimes lead to problems with UI elements not rendering correctly. By switching to software rendering, you may avoid these graphical issues, ensuring that screenshots reflect the app's actual state.
+
+4. **Consistency Across Tests**:
+   - A stable environment with updated drivers can lead to more consistent test results, making it easier to compare screenshots across different test runs.
+
+### When to Take Screenshots
+
+- **During Key Interactions**: Taking screenshots after significant actions (like button clicks or form submissions) can help verify that the app behaves as expected.
+- **Error States**: Capturing screenshots during error states can provide useful context for debugging.
+- **Visual Regression Testing**: Regularly taking screenshots can help in visual regression testing by comparing current UI states with previous versions.
+
+### Conclusion
+
+While updating drivers and configuring the emulator can improve the overall testing experience, it’s also essential to implement good practices in your test scripts for taking screenshots. If you encounter issues with screenshots not capturing correctly or inconsistently, these changes should help mitigate those problems.
+
+===================================
+
+Your provided code for running Appium tests looks mostly correct, but there are a few adjustments and best practices to ensure that screenshots are taken properly and that the directory structure is correctly managed. Here’s a refined version of your code with added explicit waits and checks to help troubleshoot why screenshots might not be saving.
+
+### Updated Code
+
+```python
+from django.http import JsonResponse
+import json
+from analyzer.models import App, AppiumTestResult  # Adjust this import as necessary
+import os
+import time
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from django.core.files import File
+from django.utils import timezone
+import signal
+import sys
+from PIL import Image, ImageChops
+
+def setup_appium(avd_name):
+    desired_caps = {
+        'platformName': 'Android',
+        'platformVersion': '7.0',  # For API 24 (Nougat)
+        'deviceName': avd_name,
+        'app': '/home/hazem-elbatawy/AndroidStudioProjects/Demozozapp/app/build/outputs/apk/debug/app-debug.apk',
+        'automationName': 'UiAutomator2',
+        "noReset": True,
+        "fullReset": False,
+    }
+
+    driver = webdriver.Remote('http://127.0.0.1:4723/wd/hub', desired_caps)
+    return driver
+
+def capture_screenshot(driver):
+    screenshot_dir = '/home/hazem-elbatawy/Downloads/apk_analyzer/media/apk_files/screenshots'
+    os.makedirs(screenshot_dir, exist_ok=True)
+    filename = f"screenshot_{int(time.time())}.png"
+    screenshot_path = os.path.join(screenshot_dir, filename)
+    
+    driver.save_screenshot(screenshot_path)
+    print(f"Screenshot saved to: {screenshot_path}")
+    return screenshot_path
+
+def start_video_recording():
+    video_dir = '/home/hazem-elbatawy/Downloads/apk_analyzer/media/apk_files/videos'
+    os.makedirs(video_dir, exist_ok=True)
+    filename = f"screenrecord_{int(time.time())}.mp4"
+    video_path = os.path.join(video_dir, filename)
+    
+    os.system(f'adb shell screenrecord {video_path} &')
+    print(f"Video recording started, saving to: {video_path}")
+    return video_path
+
+def run_app_evaluation(app_id):
+    app = App.objects.get(id=app_id)
+    driver = None
+
+    try:
+        driver = setup_appium("DjangoAPKAnalyzer")
+
+        # Capture UI hierarchy
+        app.ui_hierarchy = driver.page_source
+        
+        # Use explicit waits for elements to be present
+        wait = WebDriverWait(driver, 10)
+
+        # Simulate user clicks on buttons
+        screenshot_button = wait.until(EC.element_to_be_clickable((By.ID, 'your_screenshot_button_id')))  # Update with actual ID
+        record_button = wait.until(EC.element_to_be_clickable((By.ID, 'your_record_button_id')))  # Update with actual ID
+
+        # Click the screenshot button
+        screenshot_button.click()
+        time.sleep(1)  # Wait for the action to complete
+        first_screenshot_path = capture_screenshot(driver)
+
+        # Click the record button and start video recording
+        record_button.click()
+        video_path = start_video_recording()  # Start video recording
+        time.sleep(10)  # Record for a specified duration
+        
+        # Stop the screen recording
+        os.system('adb shell killall screenrecord')  # Use killall to stop the recording
+
+        # Capture second screenshot after recording
+        second_screenshot_path = capture_screenshot(driver)
+
+        # Save results to the database
+        save_test_result(app, first_screenshot_path, second_screenshot_path, video_path)
+        
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        if driver:
+            driver.quit()
+
+def images_are_different(img1_path, img2_path):
+    img1 = Image.open(img1_path)
+    img2 = Image.open(img2_path)
+    diff = ImageChops.difference(img1, img2)
+    return diff.getbbox() is not None  # Returns True if images are different
+
+def save_test_result(app, initial_screenshot_path, subsequent_screenshot_path, video_path):
+    screen_changed = images_are_different(initial_screenshot_path, subsequent_screenshot_path)
+
+    try:
+        with open(initial_screenshot_path, 'rb') as initial_file:
+            initial_screenshot = File(initial_file)
+
+            with open(subsequent_screenshot_path, 'rb') as subsequent_file:
+                subsequent_screenshot = File(subsequent_file)
+
+                result = AppiumTestResult(
+                    app=app,
+                    screen_changed=screen_changed,
+                    initial_screenshot=initial_screenshot,
+                    subsequent_screenshot=subsequent_screenshot,
+                    created_at=timezone.now()
+                )
+
+                result.save()
+                print("Test result saved successfully.")
+
+                # Save video if it exists
+                if os.path.exists(video_path):
+                    with open(video_path, 'rb') as video_file:
+                        video_file_data = File(video_file)
+                        result.video = video_file_data  # Assuming you have a field for video
+                        result.save()  # Save the updated result with the video
+                        print("Video saved successfully.")
+    except Exception as e:
+        print(f"Error saving test result: {e}")
+
+def signal_handler(sig, frame):
+    print('Signal received, cleaning up...')
+    sys.exit(0)
+
+def end_test(driver):
+    if driver:
+        driver.quit()
+
+# New view for running Appium tests
+def run_appium_test(request):
+    if request.method == 'POST':
+        data = json.loads(request.body)
+        app_id = data.get('app_id')
+
+        # Call the run_app_evaluation function with the app_id
+        run_app_evaluation(app_id)
+
+        return JsonResponse({'output': 'Test completed successfully.'})  # Adjust as necessary
+
+# Main execution block (if applicable)
+if __name__ == "__main__":
+    # Register the signal handler
+    signal.signal(signal.SIGINT, signal_handler)
+
+    try:
+        # Example app_id; replace with actual ID
+        run_app_evaluation(app_id=1)  
+    finally:
+        end_test(driver)
+```
+
+### Key Changes and Additions
+
+1. **Explicit Waits**: Added `WebDriverWait` to ensure elements are clickable before interacting with them. This helps avoid issues where the elements are not yet available.
+
+2. **Directory Creation**: The `os.makedirs()` function is used to ensure the screenshot and video directories are created if they don't exist.
+
+3. **Error Handling**: Improved error handling to ensure that exceptions are logged properly.
+
+4. **Cleanup Function**: The `end_test` function is simplified to just quit the driver if it exists.
+
+### Additional Tips
+
+- **Check Appium Logs**: Always check the Appium server logs for any errors related to screenshot capturing.
+- **Test Environment**: Make sure your testing environment (emulator or device) is functioning correctly and that the paths are accessible.
+- **File Permissions**: Ensure that your Django application has the necessary permissions to write to the specified directories.
+
+By implementing these changes, you should be able to successfully take screenshots during your Appium tests. If issues persist, consider adding debug print statements to track the flow of execution and identify where it might be failing.

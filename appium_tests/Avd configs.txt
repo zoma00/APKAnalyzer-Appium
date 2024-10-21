@@ -1,0 +1,59 @@
+Packages to install: - Layout Inspector image server for API 31-35 (skiaparser;3)
+- Android SDK Command-line Tools (latest) (cmdline-tools;latest)
+- Google Play APK Expansion library (extras;google;market_apk_expansion)
+- Layout Inspector image server for API 29-30 (skiaparser;1)
+- Layout Inspector image server for API S (skiaparser;2)
+- Google Web Driver (extras;google;webdriver)
+- Google Play services (extras;google;google_play_services)
+- Google Play Instant Development SDK (extras;google;instantapps)
+
+
+Preparing "Install Layout Inspector image server for API 31-35 v.4".
+Downloading http://dl.google.com/android/repository/skiaparser-11591181-linux-x64.zip
+"Install Layout Inspector image server for API 31-35 v.4" ready.
+Preparing "Install Android SDK Command-line Tools (latest) v.16.0.0 rc1".
+Downloading http://dl.google.com/android/repository/commandlinetools-linux-12172612_latest.zip
+"Install Android SDK Command-line Tools (latest) v.16.0.0 rc1" ready.
+Preparing "Install Google Play APK Expansion library v.1".
+Downloading http://dl.google.com/android/repository/market_apk_expansion-r03.zip
+"Install Google Play APK Expansion library v.1" ready.
+Preparing "Install Layout Inspector image server for API 29-30 v.6".
+Downloading http://dl.google.com/android/repository/skiaparser-7083912-linux.zip
+"Install Layout Inspector image server for API 29-30 v.6" ready.
+Preparing "Install Layout Inspector image server for API S v.3".
+Downloading http://dl.google.com/android/repository/skiaparser-7478287-linux.zip
+"Install Layout Inspector image server for API S v.3" ready.
+Preparing "Install Google Web Driver v.2".
+Downloading http://dl.google.com/android/repository/webdriver_r02.zip
+"Install Google Web Driver v.2" ready.
+Preparing "Install Google Play services v.49".
+Downloading http://dl.google.com/android/repository/google_play_services_v16_1_rc09.zip
+"Install Google Play services v.49" ready.
+Preparing "Install Google Play Instant Development SDK v.1.9.0".
+Downloading http://dl.google.com/android/repository/iasdk-1.9.0-1566514721.zip
+"Install Google Play Instant Development SDK v.1.9.0" ready.
+Installing Layout Inspector image server for API 31-35 in /home/hazem-elbatawy/Android/Sdk/skiaparser/3
+"Install Layout Inspector image server for API 31-35 v.4" complete.
+"Install Layout Inspector image server for API 31-35 v.4" finished.
+Installing Android SDK Command-line Tools (latest) in /home/hazem-elbatawy/Android/Sdk/cmdline-tools/latest
+"Install Android SDK Command-line Tools (latest) v.16.0.0 rc1" complete.
+"Install Android SDK Command-line Tools (latest) v.16.0.0 rc1" finished.
+Installing Google Play APK Expansion library in /home/hazem-elbatawy/Android/Sdk/extras/google/market_apk_expansion
+"Install Google Play APK Expansion library v.1" complete.
+"Install Google Play APK Expansion library v.1" finished.
+Installing Layout Inspector image server for API 29-30 in /home/hazem-elbatawy/Android/Sdk/skiaparser/1
+"Install Layout Inspector image server for API 29-30 v.6" complete.
+"Install Layout Inspector image server for API 29-30 v.6" finished.
+Installing Layout Inspector image server for API S in /home/hazem-elbatawy/Android/Sdk/skiaparser/2
+"Install Layout Inspector image server for API S v.3" complete.
+"Install Layout Inspector image server for API S v.3" finished.
+Installing Google Web Driver in /home/hazem-elbatawy/Android/Sdk/extras/google/webdriver
+"Install Google Web Driver v.2" complete.
+"Install Google Web Driver v.2" finished.
+Installing Google Play services in /home/hazem-elbatawy/Android/Sdk/extras/google/google_play_services
+"Install Google Play services v.49" complete.
+"Install Google Play services v.49" finished.
+Installing Google Play Instant Development SDK in /home/hazem-elbatawy/Android/Sdk/extras/google/instantapps
+"Install Google Play Instant Development SDK v.1.9.0" complete.
+"Install Google Play Instant Development SDK v.1.9.0" finished.
+
