@@ -89,7 +89,7 @@ Once the application is running, you can access it at `http://localhost:8000`.
 To run tests for the application, use the following command:
 
 ```bash
-docker-compose exec web python manage.py test
+appiumtest.py
 ```
 
 ## Contributing
