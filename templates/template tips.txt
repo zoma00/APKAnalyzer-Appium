@@ -1,3 +1,0 @@
-{% trans %}
-
-Create templates for each view, ensuring accessibility and using Django's {% trans %} tag for translatable strings.
