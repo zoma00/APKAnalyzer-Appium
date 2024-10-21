@@ -1,0 +1,74 @@
+{
+    "unprotected": [
+        // ".*" // Matches every method, no authentication will be used **DANGER**
+        // "/android.emulation.control.SnapshotService.*" // Everyone can make snapshots.
+    ],
+    "allowlist": [
+        {
+            "iss": "DjangoAPKAnalyzer",
+            "allowed": [
+                "/android.emulation.control.EmulatorController/captureScreenshot"
+            ],
+            "protected": [
+                // Any methods that should require token validation can be added here
+            ]
+        },
+        {
+            "iss": "android-studio",
+            "allowed": [
+                "/android.emulation.control.EmulatorController/.*",
+                "/android.emulation.control.UiController/.*",
+                "/android.emulation.control.SnapshotService/.*",
+                "/android.emulation.control.incubating.*"
+            ]
+        },
+        {
+            "iss": "icebox",
+            "protected": [
+                "/android.emulation.control.SnapshotService/PullSnapshot",
+                "/android.emulation.control.SnapshotService/DeleteSnapshot",
+                "/android.emulation.control.SnapshotService/TrackProcess"
+            ]
+        },
+        {
+            "iss": "gradle-utp-emulator-control",
+            "allowed": [
+                "/android.emulation.control.EmulatorController/getSensor",
+                "/android.emulation.control.EmulatorController/setSensor",
+                "/android.emulation.control.EmulatorController/setPhysicalModel",
+                "/android.emulation.control.EmulatorController/getPhysicalModel",
+                "/android.emulation.control.EmulatorController/streamPhysicalModel",
+                "/android.emulation.control.EmulatorController/setBattery",
+                "/android.emulation.control.EmulatorController/getBattery",
+                "/android.emulation.control.EmulatorController/setGps",
+                "/android.emulation.control.EmulatorController/getGps",
+                "/android.emulation.control.EmulatorController/sendPhone",
+                "/android.emulation.control.EmulatorController/sendSms",
+                "/android.emulation.control.EmulatorController/setDisplayConfigurations",
+                "/android.emulation.control.EmulatorController/getDisplayConfigurations",
+                "/android.emulation.control.EmulatorController/rotateVirtualSceneCamera",
+                "/android.emulation.control.EmulatorController/setVirtualSceneCameraVelocity",
+                "/android.emulation.control.EmulatorController/setPosture",
+                "/android.emulation.control.EmulatorController/getBrightness",
+                "/android.emulation.control.EmulatorController/setBrightness"
+            ],
+            "protected": [
+                "/android.emulation.control.EmulatorController/getScreenshot",
+                "/android.emulation.control.EmulatorController/streamScreenshot",
+                "/android.emulation.control.EmulatorController/setClipboard",
+                "/android.emulation.control.EmulatorController/getClipboard",
+                "/android.emulation.control.EmulatorController/streamClipboard",
+                "/android.emulation.control.EmulatorController/sendFingerprint",
+                "/android.emulation.control.EmulatorController/sendKey",
+                "/android.emulation.control.EmulatorController/sendTouch",
+                "/android.emulation.control.EmulatorController/sendMouse",
+                "/android.emulation.control.EmulatorController/injectAudio",
+                "/android.emulation.control.EmulatorController/streamAudio",
+                "/android.emulation.control.EmulatorController/getLogcat",
+                "/android.emulation.control.EmulatorController/streamLogcat",
+                "/android.emulation.control.EmulatorController/getStatus",
+                "/android.emulation.control.EmulatorController/streamNotification"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+If you can't find the "Rebuild Project" option in Android Studio, follow these steps:
+
+1. **Build Menu**: Go to the top menu bar and click on `Build`. 
+2. **Look for Rebuild**: In the dropdown, you should see options like `Make Project` and `Rebuild Project`. If you only see `Make Project`, it might be because your project is already built and doesn't need rebuilding.
+
+3. **Alternative Method**: You can also use the shortcut:
+   - Press `Ctrl + F9` (Windows/Linux) or `Command + F9` (Mac) to build the project.
+
+4. **Invalidate Caches/Restart**: If you still can't find it, try going to `File` > `Invalidate Caches / Restart...` and then restart Android Studio. This can resolve UI issues.
+
+After rebuilding, check the output directory again for your APK. Let me know if you need further assistance!

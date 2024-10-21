@@ -1,0 +1,1 @@
+go for toolbar tool and select build make module app name main

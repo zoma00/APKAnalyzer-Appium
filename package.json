@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "appium": "^2.11.3",
+    "glob": "^11.0.0",
+    "inflight": "^1.0.6",
+    "jsonwebtoken": "^9.0.2",
+    "rimraf": "^6.0.1",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "appium-uiautomator2-driver": "^2.29.11"
+  }
+}
