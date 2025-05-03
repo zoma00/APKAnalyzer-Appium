@@ -1,3 +1,21 @@
+# Basic Django Ecommerce Project
+
+<p align="center">
+
+  <a href="https://docs.djangoproject.com/en/5.2/" target="_blank">
+    <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="400" alt="Django Logo">
+  </a>
+
+  <a href="https://appium.io/docs/en/latest/" target="_blank">
+    <img src="https://appium.io/images/appium-logo.svg" width="400" alt="Appium Logo">
+  </a>
+
+</p>
+
+
+
+
+
 # APKAnalyzer-Appium
 This project is a full-stack web application developed using Django and MySQL, designed to manage and test Android APKs. The application leverages Appium for automated testing, providing users with a platform to upload, evaluate, and manage their applications.
 
