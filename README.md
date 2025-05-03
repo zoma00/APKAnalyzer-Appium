@@ -3,7 +3,7 @@
     <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="400" alt="Django Logo">
   </a>
 
-  <a href="https://appium.io" target="_blank">
+  <a href="https://iconduck.com/icons/27036/appium#" target="_blank">
     <img src="https://appium.io/images/appium-logo.svg" width="400" alt="Appium Logo">
   </a>
 </p>
