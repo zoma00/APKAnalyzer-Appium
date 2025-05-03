@@ -1,4 +1,3 @@
-# Basic Django Ecommerce Project
 
 <p align="center">
 
