@@ -4,8 +4,6 @@
 
 You can then include the Appium logo in your README file like this:
 
-```markdown
-# Basic Django Ecommerce Project
 
 <p align="center">
 
