@@ -1,10 +1,16 @@
+<div>
+
 <p align="center">
   <a href="https://docs.djangoproject.com/en/5.2/" target="_blank">
     <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="400" alt="Django Logo">
   </a>
-
-  <a href="https://appium.io/docs/en/latest/" target="_blank">
-    <img src="appium.svg" width="400" alt="Appium Logo">
+</div>
+<div>
+<p align="center">
+ <a href="https://appium.io/docs/en/latest/" target="_blank">
+    <img src="appium.svg" width="200" alt="Appium Logo">
+</div>
+ 
   </a>
 </p>
 
