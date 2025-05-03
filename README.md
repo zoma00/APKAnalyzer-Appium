@@ -7,7 +7,7 @@
   </a>
 
   <a href="https://appium.io/docs/en/latest/" target="_blank">
-    <img src="https://appium.io/images/appium-logo.svg" width="400" alt="Appium Logo" onerror="this.onerror=null; this.src='https://appium.io/images/appium-logo-alt.svg';">
+    <img src="https://appium.io/m/img/logos/appium-logo.svg" width="400" alt="Appium Logo" onerror="this.onerror=null; this.src='https://appium.io/images/appium-logo-alt.svg';">
   </a>
 
 </p>
