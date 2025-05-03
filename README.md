@@ -4,7 +4,7 @@
   </a>
 
   <a href="https://appium.io/docs/en/latest/" target="_blank">
-    <img src="https://raw.githubusercontent.com/appium/appium/main/docs/assets/appium-logo.png" width="400" alt="Appium Logo">
+<img src="assets/appium-logo.svg" width="400" alt="Appium Logo">
   </a>
 </p>
 
