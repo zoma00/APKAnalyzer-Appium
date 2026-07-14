@@ -23,10 +23,14 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0(ivfg&g-of-3y5de88$eyez*%=iyrd=-aw0(aigc6)$qil6uh'
+# The insecure default is for local development only; set SECRET_KEY in
+# the environment for any deployed instance.
+SECRET_KEY = os.environ.get(
+    'SECRET_KEY', 'django-insecure-dev-only-key-do-not-use-in-production'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG', '1') == '1'
 
 ALLOWED_HOSTS = []
 
@@ -88,26 +92,27 @@ LANGUAGES = [
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'apk_analyzer_db',  # Your actual database name
-        'USER': 'hazem',  # Your MySQL username
-        'PASSWORD': '***REMOVED***',  # Your MySQL password
-        'HOST': '127.0.0.1',  # Or 'localhost'
-        'PORT': '3306',  # Default MySQL port
+# SQLite by default (development, tests, CI). Set DB_ENGINE=mysql plus
+# the DB_* variables to use MySQL — credentials come from the
+# environment and must never be committed.
+if os.environ.get('DB_ENGINE') == 'mysql':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': os.environ.get('DB_NAME', 'apk_analyzer_db'),
+            'USER': os.environ['DB_USER'],
+            'PASSWORD': os.environ['DB_PASSWORD'],
+            'HOST': os.environ.get('DB_HOST', '127.0.0.1'),
+            'PORT': os.environ.get('DB_PORT', '3306'),
+        }
     }
-}
-
-
-"""
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
     }
-}
-"""
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
