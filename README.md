@@ -1,6 +1,6 @@
 # APK Analyzer — Django + Appium
 
-![CI](https://github.com/zoma00/APKAnalyzer-Appium/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/zoma00/apk-analyzer-appium/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django%204.2-092E20?logo=django&logoColor=white)
 ![Appium](https://img.shields.io/badge/Appium-663399?logo=appium&logoColor=white)
@@ -54,8 +54,8 @@ Browser ──> Django (upload APK, per-user app management)
 ## Setup
 
 ```bash
-git clone https://github.com/zoma00/APKAnalyzer-Appium.git
-cd APKAnalyzer-Appium
+git clone https://github.com/zoma00/apk-analyzer-appium.git
+cd apk-analyzer-appium
 python3 -m venv venv && source venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
