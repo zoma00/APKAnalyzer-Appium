@@ -1,0 +1,8 @@
+# Direct project dependencies (there was no requirements file before).
+Django==4.2.16
+# 2.x is the last Appium client generation using the desired-capabilities
+# API this project was written against.
+Appium-Python-Client==2.11.1
+Pillow>=10.0
+# MySQL is optional: set DB_ENGINE=mysql and install mysqlclient to use it.
+# mysqlclient>=2.2
