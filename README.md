@@ -1,5 +1,6 @@
 # APK Analyzer — Django + Appium
 
+![CI](https://github.com/zoma00/APKAnalyzer-Appium/actions/workflows/ci.yml/badge.svg)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
 ![Django](https://img.shields.io/badge/Django%204.2-092E20?logo=django&logoColor=white)
 ![Appium](https://img.shields.io/badge/Appium-663399?logo=appium&logoColor=white)
