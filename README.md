@@ -15,20 +15,9 @@ database — browsable per app in the web UI.
 
 ## How it works
 
-```text
-Browser ──> Django (upload APK, per-user app management)
-                │
-                ▼
-        run_appium_test view
-                │  starts Appium server + Android emulator if needed
-                │  installs the APK via adb
-                ▼
-        appium_tests/appium_test.py
-                │  Appium WebDriver session against the emulator
-                │  screenshot → interact → screenshot
-                ▼
-        AppiumTestResult (screenshots, screen_changed, UI hierarchy, log)
-```
+<p align="center">
+  <img src="docs/application-flow.svg" width="100%" alt="APK Analyzer flow from authenticated APK upload through Django, Appium, ADB, an Android emulator, screenshot comparison, and persisted test results">
+</p>
 
 ## Features
 

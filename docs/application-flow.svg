@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 1140" role="img" aria-labelledby="title desc">
+  <title id="title">APK Analyzer and Appium application flow</title>
+  <desc id="desc">An authenticated user uploads and manages an APK through owner-scoped Django views. Django stores the APK and app record, then the evaluation trigger starts Appium and an Android emulator as needed and installs the APK with ADB. Appium WebDriver and UiAutomator2 capture the initial screen, interact with the app, capture a second screen, and collect the UI hierarchy. Pillow compares the images, and Django stores the screenshots, change result, hierarchy, and log for display in the app's test history.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .heading { font-size: 28px; font-weight: 700; fill: #ffffff; }
+      .subtitle { font-size: 16px; font-weight: 500; fill: #ddd6fe; }
+      .label { font-size: 19px; font-weight: 700; fill: #0f172a; }
+      .copy { font-size: 15px; font-weight: 500; fill: #334155; }
+      .small { font-size: 14px; font-weight: 600; fill: #475569; }
+      .pill { font-size: 14px; font-weight: 700; fill: #4c1d95; }
+      .arrow { fill: none; stroke: #475569; stroke-width: 3; marker-end: url(#arrow); }
+      .return { fill: none; stroke: #7c3aed; stroke-width: 3; stroke-dasharray: 8 6; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="720" height="1140" rx="24" fill="#f8fafc"/>
+
+  <rect x="20" y="20" width="680" height="94" rx="18" fill="#4c1d95"/>
+  <text x="360" y="59" text-anchor="middle" class="heading">APK Analyzer + Appium</text>
+  <text x="360" y="88" text-anchor="middle" class="subtitle">Django-managed Android UI evaluation flow</text>
+
+  <rect x="150" y="142" width="420" height="82" rx="16" fill="#ffffff" stroke="#a78bfa" stroke-width="2"/>
+  <text x="360" y="176" text-anchor="middle" class="label">Authenticated App Owner</text>
+  <text x="360" y="202" text-anchor="middle" class="copy">Uploads, manages, and evaluates Android APKs</text>
+
+  <path d="M360 224 L360 260" class="arrow"/>
+
+  <rect x="40" y="262" width="640" height="112" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+  <text x="360" y="298" text-anchor="middle" class="label">Django Web Platform</text>
+  <text x="360" y="327" text-anchor="middle" class="copy">Authentication · owner-scoped CRUD views · file upload forms</text>
+  <rect x="155" y="342" width="410" height="24" rx="12" fill="#ddd6fe"/>
+  <text x="360" y="359" text-anchor="middle" class="pill">Only the owner can view, edit, delete, or evaluate an app</text>
+
+  <path d="M360 374 L360 410" class="arrow"/>
+
+  <rect x="40" y="412" width="640" height="100" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="360" y="448" text-anchor="middle" class="label">App Record &amp; APK Storage</text>
+  <text x="360" y="477" text-anchor="middle" class="copy">Django App model + uploaded APK under media/apk_files/</text>
+  <text x="360" y="500" text-anchor="middle" class="small">SQLite by default · optional MySQL configuration</text>
+
+  <path d="M360 512 L360 548" class="arrow"/>
+
+  <rect x="40" y="550" width="640" height="112" rx="16" fill="#e0f2fe" stroke="#0284c7" stroke-width="2"/>
+  <text x="360" y="586" text-anchor="middle" class="label">Evaluation Orchestration</text>
+  <text x="360" y="615" text-anchor="middle" class="copy">Authenticated POST to run_appium_test</text>
+  <text x="360" y="642" text-anchor="middle" class="small">Starts Appium if needed · launches the configured AVD · installs APK</text>
+
+  <path d="M245 662 L245 702" class="arrow"/>
+  <path d="M475 662 L475 702" class="arrow"/>
+
+  <rect x="40" y="704" width="310" height="140" rx="16" fill="#ffffff" stroke="#f97316" stroke-width="2"/>
+  <text x="195" y="739" text-anchor="middle" class="label">ADB + Android Emulator</text>
+  <text x="195" y="768" text-anchor="middle" class="copy">DjangoAPKAnalyzer AVD</text>
+  <text x="195" y="794" text-anchor="middle" class="copy">APK install / package check</text>
+  <line x1="68" y1="814" x2="322" y2="814" stroke="#fed7aa" stroke-width="2"/>
+  <text x="195" y="835" text-anchor="middle" class="small">Android application runtime</text>
+
+  <rect x="370" y="704" width="310" height="140" rx="16" fill="#ffffff" stroke="#ef4444" stroke-width="2"/>
+  <text x="525" y="739" text-anchor="middle" class="label">Appium Automation</text>
+  <text x="525" y="768" text-anchor="middle" class="copy">WebDriver session</text>
+  <text x="525" y="794" text-anchor="middle" class="copy">UiAutomator2 driver</text>
+  <line x1="398" y1="814" x2="652" y2="814" stroke="#fecaca" stroke-width="2"/>
+  <text x="525" y="835" text-anchor="middle" class="small">Controls the emulator UI</text>
+
+  <path d="M195 844 L195 874 L325 874 L325 894" class="arrow"/>
+  <path d="M525 844 L525 874 L395 874 L395 894" class="arrow"/>
+
+  <rect x="40" y="896" width="640" height="104" rx="16" fill="#fff7ed" stroke="#ea580c" stroke-width="2"/>
+  <text x="360" y="931" text-anchor="middle" class="label">UI Evaluation</text>
+  <text x="360" y="960" text-anchor="middle" class="copy">Initial screenshot → first-button interaction → subsequent screenshot</text>
+  <text x="360" y="987" text-anchor="middle" class="small">Captures the Appium page-source UI hierarchy</text>
+
+  <path d="M360 1000 L360 1030" class="arrow"/>
+
+  <rect x="40" y="1032" width="300" height="78" rx="16" fill="#fefce8" stroke="#ca8a04" stroke-width="2"/>
+  <text x="190" y="1064" text-anchor="middle" class="label">Pillow Comparison</text>
+  <text x="190" y="1092" text-anchor="middle" class="copy">Pixel-level screen change detection</text>
+
+  <rect x="380" y="1032" width="300" height="78" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+  <text x="530" y="1064" text-anchor="middle" class="label">Persisted Test Result</text>
+  <text x="530" y="1092" text-anchor="middle" class="copy">Screenshots · hierarchy · flag · log</text>
+
+  <path d="M340 1071 L380 1071" class="arrow"/>
+  <path d="M680 1071 L700 1071 L700 183 L570 183" class="return"/>
+</svg>
