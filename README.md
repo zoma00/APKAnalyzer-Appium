@@ -1,125 +1,103 @@
-<div>
+# APK Analyzer — Django + Appium
 
-<p align="center">
-  <a href="https://docs.djangoproject.com/en/5.2/" target="_blank">
-    <img src="https://www.djangoproject.com/m/img/logos/django-logo-negative.svg" width="400" alt="Django Logo">
-  </a>
-</div>
-<div>
-<p align="center">
- <a href="https://appium.io/docs/en/latest/" target="_blank">
-    <img src="appium.svg" width="200" alt="Appium Logo">
-</div>
- 
-  </a>
-</p>
+![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django%204.2-092E20?logo=django&logoColor=white)
+![Appium](https://img.shields.io/badge/Appium-663399?logo=appium&logoColor=white)
+![Android](https://img.shields.io/badge/Android%20Emulator-3DDC84?logo=android&logoColor=white)
 
+A Django web platform that manages uploaded Android APKs and drives
+automated UI evaluations against an Android emulator through Appium.
+For each run it installs the APK over `adb`, captures a screenshot
+before and after interacting with the app, detects whether the screen
+changed, and stores the screenshots, UI hierarchy, and run log in the
+database — browsable per app in the web UI.
 
+## How it works
 
-# APKAnalyzer-Appium
-This project is a full-stack web application developed using Django and MySQL, designed to manage and test Android APKs. The application leverages Appium for automated testing, providing users with a platform to upload, evaluate, and manage their applications.
-
-Here’s a comprehensive README file for your project titled "Full-Stack Web Application with Django and Appium":
-
-
-# Full-Stack Web Application with Django and Appium
-
-## Challenge Overview
-This project is a full-stack web application developed using Django and MySQL, designed to manage and test Android APKs. The application leverages Appium for automated testing, providing users with a platform to upload, evaluate, and manage their applications.
-
-## Table of Contents
-- [Features](#features)
-- [Project Requirements](#project-requirements)
-- [Technical Specifications](#technical-specifications)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
-
-## Features
-- **User Authentication and Management**: Secure user registration and login functionalities.
-- **App Management**: Users can list, add, update, and delete their uploaded apps.
-- **Automated App Evaluation**: Integrates Appium to automate the testing of APKs on an Android emulator.
-- **Accessibility Features**: Options for font size adjustments and high contrast mode.
-- **Multilingual Support**: Supports English and French languages.
-
-## Project Requirements
-1. **User Authentication and Management**:
-   - Implement user registration and login functionalities using Django's built-in authentication system.
-
-2. **App Management**:
-   - List, add, update, and delete apps with various attributes (id, name, uploaded_by, etc.).
-   - Upload APK files and run Appium tests.
-
-3. **App Evaluation with Appium**:
-   - Launch an Android emulator, install the APK, and capture UI elements.
-   - Store screenshots, video recordings, and UI elements hierarchy in the database.
-
-4. **Accessibility Features**:
-   - Options for font size adjustments and high contrast mode.
-
-5. **Multilingual Support**:
-   - Bilingual functionality with dynamic language switching.
-
-## Technical Specifications
-- **Deployment**: Docker (includes Dockerfile and docker-compose.yaml)
-- **Backend**: Django with MySQL
-- **Frontend**: Django Templates, HTML, CSS, JavaScript
-- **Automated Testing**: Appium
-- **Accessibility**: CSS and JavaScript for accessibility features
-- **Multilingual Support**: Django’s internationalization framework
-- **Quality Control**: Django Unit Tests
-
-## Installation
-To set up the project locally, follow these steps:
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/full-stack-web-app.git
-   cd full-stack-web-app
-   ```
-
-2. **Build and run the Docker containers**:
-   ```bash
-   docker-compose up --build
-   ```
-
-3. **Migrate the database**:
-   ```bash
-   docker-compose exec web python manage.py migrate
-   ```
-
-4. **Create a superuser** (optional):
-   ```bash
-   docker-compose exec web python manage.py createsuperuser
-   ```
-
-## Usage
-Once the application is running, you can access it at `http://localhost:8000`. 
-
-- **User Registration/Login**: Create an account or log in to manage your apps.
-- **App Management**: Upload your APK files and run tests.
-- **Accessibility Options**: Adjust font sizes and enable high contrast mode.
-- **Language Switching**: Toggle between English and French.
-
-## Testing
-To run tests for the application, use the following command:
-
-```bash
-appiumtest.py
+```text
+Browser ──> Django (upload APK, per-user app management)
+                │
+                ▼
+        run_appium_test view
+                │  starts Appium server + Android emulator if needed
+                │  installs the APK via adb
+                ▼
+        appium_tests/appium_test.py
+                │  Appium WebDriver session against the emulator
+                │  screenshot → interact → screenshot
+                ▼
+        AppiumTestResult (screenshots, screen_changed, UI hierarchy, log)
 ```
 
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+## Features
+
+- User registration and login (Django auth)
+- Per-user APK management: upload, edit, delete — all owner-scoped
+  (users can only see and modify their own apps)
+- One-click Appium evaluation from the web UI
+- Before/after screenshot capture with pixel-level change detection
+  (Pillow `ImageChops`)
+- Evaluation history per app: screenshots, change flag, and logs
+  persisted in the `AppiumTestResult` model
+
+## Requirements
+
+- Python 3.10+
+- [Appium server](https://appium.io/) (`npm install -g appium`)
+- Android SDK with `adb`, the emulator, and an AVD named
+  `DjangoAPKAnalyzer`
+- SQLite works out of the box; for MySQL set `DB_ENGINE=mysql` and the
+  `DB_NAME` / `DB_USER` / `DB_PASSWORD` / `DB_HOST` / `DB_PORT`
+  environment variables (and `pip install mysqlclient`)
+
+## Setup
+
+```bash
+git clone https://github.com/zoma00/APKAnalyzer-Appium.git
+cd APKAnalyzer-Appium
+python3 -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+```
+
+Open <http://localhost:8000>, register an account, upload an APK, and
+start an evaluation from the app's page (the Appium server and emulator
+must be available on the machine running Django).
+
+## Tests
+
+```bash
+python manage.py test
+```
+
+The suite covers authentication and ownership rules on every view, APK
+upload, and the screenshot-comparison/persistence layer. The Appium
+pipeline itself requires a real emulator, so it is exercised manually
+rather than in CI.
+
+## Configuration
+
+| Variable | Default | Purpose |
+|---|---|---|
+| `SECRET_KEY` | insecure dev key | Set in production |
+| `DEBUG` | `1` | Set `DEBUG=0` in production |
+| `DB_ENGINE` | sqlite | `mysql` switches to MySQL via `DB_*` vars |
+
+## Project structure
+
+```text
+analyzer/            # Django app: models, views, forms, templates
+  models.py          # App (uploaded APKs), AppiumTestResult (runs)
+  views.py           # Auth-protected, owner-scoped CRUD + test trigger
+appium_tests/
+  appium_test.py     # AppEvaluator, screenshot diffing, result saving
+apk_analyzer/        # Django project settings and URLs
+templates/analyzer/  # Web UI
+```
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
+[MIT](LICENSE)
 
-
-For any questions or feedback, please contact [your email address].
-Author:
----------
-Hazem Elbatawy 
-
+Author: Hazem Elbatawy
